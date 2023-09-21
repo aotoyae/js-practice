@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TT8</title>
+  </head>
+  <body>
+    <h1>if문 구구단</h1>
+    <span>출력할 단 : </span>
+    <input type="text" id="num" />
+    <button onclick="display()">CLICK</button>
+    <script>
+      function display() {
+        var strNum = document.querySelector("#num").value;
+        var n = Number(strNum);
+        if (n < 2 || n > 9) {
+          document.write("<br>2이상 9 이하의 숫자를 입력해!");
+        } else {
+          document.write("<h2>" + n + "단</h2>");
+          for (var i = 1; i <= 9; i++) {
+            document.write(n + " * " + i + " = " + n * i + "<br>");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
